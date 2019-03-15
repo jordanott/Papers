@@ -2,9 +2,15 @@
 
 
 
-## Biologically Plausible Backpropagation
-[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)
-* Solves weight transport problem
+## Biologically Plausible Backpropagation  
+[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)  
+Overview of models proposing biological backprop solutions  
+* Locality of error signal, weight transport, unrealistic models of neurons
+* Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity
+* Dynamics and plasticity of the models can be described within a common framework of energy minimization
+
+[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)  
+Solves weight transport problem
 * Replace transpose of weight matrix, *W<sup>T</sup>* with random weights *B*
 
 ## Spiking Neural Networks
