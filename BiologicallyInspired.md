@@ -9,9 +9,14 @@ Overview of models proposing biological backprop solutions
 * Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity
 * Dynamics and plasticity of the models can be described within a common framework of energy minimization
 
-[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)  
-Solves weight transport problem
+[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)  Solves weight transport problem
 * Replace transpose of weight matrix, *W<sup>T</sup>* with random weights *B*
+
+[Backpropagation through time and the brain](https://reader.elsevier.com/reader/sd/pii/S0959438818302009?token=5BD5FEC9246457E7B82A1D05CF9552D0A225AB8D2019AAA0B40DCC24F5578198F246669B22A804E1B99C966BAA4EF6C6)  
+Review of BPTT; general overview of attention and memory mechanisms used for Temporal credit assignment (TCA)
+* Progress in solving difficult TCA has been made by memory- and attention-based architectures and algorithms
+* Strengthens BPTT’s position as a guide for thinking about TCA in artificial and biological systems
+
 
 ## Spiking Neural Networks
 [Deep Continuous Local Learning]()
