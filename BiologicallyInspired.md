@@ -1,14 +1,21 @@
 # Biologically Inspired Neural Networks
 
-
-
 ## Biologically Plausible Backpropagation  
 [Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)  
-Overview of models proposing biological backprop solutions  
-* Locality of error signal, weight transport, unrealistic models of neurons
-* Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity
-* Dynamics and plasticity of the models can be described within a common framework of energy minimization
-
+Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity and *approximate* backprop
+* **Temporal error models:** 
+  * Contrastive learning (Box 2): Approximates backprop but requires control signal of when target is present
+    * 2 stages; 1. unlearn (anti-Hebbian) existing association between input and prediction 2. learn new association between input and target  
+    ![](https://latex.codecogs.com/gif.latex?%5Ccenter%20%5CDelta%20W%20%5Csim%20%28t%20-%20x_L%29x%5ET_%7BL-1%7D%20%3D%20-%20x_L%20x%5ET_%7BL-1%7D%20&plus;%20t%20x%5ET_%7BL-1%7D%20%5Cnewline%20%5Ccenter%20%5CDelta%20W%20%5Csim%20%5Cdelta_L%20x%5ET_%7BL-1%7D)
+* **Explicit error models:** 
+  * Predictive coding (Box 3): 
+    * Requires one-to-one connectivity between error and value nodes  
+    ![](https://latex.codecogs.com/gif.latex?%5Ctext%7BError%20Node%3A%20%7D%20%5Cdelta_l%20%3D%20x_l%20-%20W_%7Bl-1%7D%20x_%7Bl-1%7D%20%5Cnewline%20%5Ctext%7BValue%20Node%3A%20%7D%5Cdot%7Bx%7D%20%3D%20-%20%5Cdelta_l%20&plus;%20W_l%5ET%20%5Cdelta_%7Bl&plus;1%7D)
+  * Dendritic error model (Box 4): Extension from predictive coding; "Errors computed in apical dendrites"
+    * Decay, feed forward, feedback, intra-layer  
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\dot{x}&space;=&space;-x_l&space;&plus;&space;W_{l-1}x_{l-1}&space;&plus;&space;W_l^T&space;x_{l&plus;1}&space;-&space;W_l^T&space;W_l&space;x_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dot{x}&space;=&space;-x_l&space;&plus;&space;W_{l-1}x_{l-1}&space;&plus;&space;W_l^T&space;x_{l&plus;1}&space;-&space;W_l^T&space;W_l&space;x_l" title="\dot{x} = -x_l + W_{l-1}x_{l-1} + W_l^T x_{l+1} - W_l^T W_l x_l" /></a>
+* Can be described in terms of mimizing energy (Hopfield energy &rarr; contrastive learning & free energy &rarr; Explicit models)
+    
 [Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)  Solves weight transport problem
 * Replace transpose of weight matrix, *W<sup>T</sup>* with random weights *B*
 
