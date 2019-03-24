@@ -1,7 +1,7 @@
 # Biologically Inspired Neural Networks
 
 ## Biologically Plausible Backpropagation  
-[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)  
+**[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)**  
 Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity and *approximate* backprop
 * **Temporal error models:** 
   * Contrastive learning (Box 2): Approximates backprop but requires control signal of when target is present
@@ -16,23 +16,29 @@ Learning rules in biologically plausible models can be implemented with differen
     <a href="https://www.codecogs.com/eqnedit.php?latex=\dot{x}&space;=&space;-x_l&space;&plus;&space;W_{l-1}x_{l-1}&space;&plus;&space;W_l^T&space;x_{l&plus;1}&space;-&space;W_l^T&space;W_l&space;x_l" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dot{x}&space;=&space;-x_l&space;&plus;&space;W_{l-1}x_{l-1}&space;&plus;&space;W_l^T&space;x_{l&plus;1}&space;-&space;W_l^T&space;W_l&space;x_l" title="\dot{x} = -x_l + W_{l-1}x_{l-1} + W_l^T x_{l+1} - W_l^T W_l x_l" /></a>
 * Can be described in terms of mimizing energy (Hopfield energy &rarr; contrastive learning & free energy &rarr; Explicit models)
     
-[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)  Solves weight transport problem
+**[Random synaptic feedback weights support error backpropagation for deep learning](https://www.nature.com/articles/ncomms13276)**  
+Solves weight transport problem
 * Replace transpose of weight matrix, *W<sup>T</sup>* with random weights *B*
 
-[Backpropagation through time and the brain](https://reader.elsevier.com/reader/sd/pii/S0959438818302009?token=5BD5FEC9246457E7B82A1D05CF9552D0A225AB8D2019AAA0B40DCC24F5578198F246669B22A804E1B99C966BAA4EF6C6)  
+**[Backpropagation through time and the brain](https://reader.elsevier.com/reader/sd/pii/S0959438818302009?token=5BD5FEC9246457E7B82A1D05CF9552D0A225AB8D2019AAA0B40DCC24F5578198F246669B22A804E1B99C966BAA4EF6C6)**  
 Review of BPTT; general overview of attention and memory mechanisms used for Temporal credit assignment (TCA)
 * Progress in solving difficult TCA has been made by memory- and attention-based architectures and algorithms
 * Strengthens BPTT’s position as a guide for thinking about TCA in artificial and biological systems
 
 
 ## Spiking Neural Networks
-[Deep Continuous Local Learning]()
+**[Deep Continuous Local Learning]()**
 
 ## Learning in the Machine
-[Weight Sharing]()
+**[Learning in the Machine: To Share or not to Share]()**
+
+## Unsupervised
+**[Unsupervised Learning by Competing Hidden Units](https://arxiv.org/pdf/1806.10181.pdf)**  
+* Can good/useful early layer representations be learned without supervision; using only a local “biological” synaptic plasticity rule?
+* Local learning rule, that incorporate both LTP and LTD types of plasticity and global inhibition in the hidden layer
 
 ## Reinforcement Learning
-[Reinforcement learning in artificial and biological systems](https://www.nature.com/articles/s42256-019-0025-4#ref-CR69)
+**[Reinforcement learning in artificial and biological systems](https://www.nature.com/articles/s42256-019-0025-4#ref-CR69)**
 * Connections from cortex to striatum
   * Cortex represents available choices, strength of cortical connections on striatal cells represents value of choices
   * Dopamine encodes Reward Prediction Error (RPE)
