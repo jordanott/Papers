@@ -1,14 +1,5 @@
-# Biologically Inspired Neural Networks
+# Biologically Plausible Backpropagation  
 
-## Questions
-* Poisson spike train
-
-## Notes
-* Want to learn to predict active neurons
-* Minimize energy consumption of neurons (evolutionarily advantageous)
-  * Cite work showing decrease in glucose(?) usage in areas of brain after learning
-
-## Biologically Plausible Backpropagation  
 **[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)**  
 Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity and *approximate* backprop
 * **Temporal error models:**
@@ -62,54 +53,3 @@ transposed) of the feedforward connections (weight transport)
 
 Future work:
 * Lateral connections
-
-
-## Spiking Neural Networks
-**[Deep Continuous Local Learning]()**
-u_i = \sum_j w_{ij} (\epsilon * s_j) + \eta * s_i
-s_i = \theta (u_i)
-
-* Conditional probability of output spike (s<sub>i</sub>=1); given input spike vector **s**
-P(s_i = 1| s) = \sigma(u_i(t))
-
-* Gradient-based optimization of a target loss L as a function of a<sub>i</sub>
-
-a_i = \sigma(u_i); \frac{\partial L}{\partial w_{ij}} = \frac{\partial L}{\partial a_{i}} \frac{\partial a_{i}}{\partial w_{ij}}
-
-* Three factor rules
-\text{Modulatory: } \frac{\partial L}{\partial u_i} \text{post-synaptic: } \sigma^'(u_i) \text{pre-synaptic: }(\epsilon * s_j)
-
-* Learn local errors from random classifiers at each layer;  no error information propagates downwards through the layer stack, the layers indirectly learn useful hierarchical features that end up minimizing the cost at the top layer
-
-* Layerwise loss
-\text{fixed random matricies: } g_{ij}^n; \text{pseudotarget for layer n: } \hat{y}_i^n;  L^n = \sum_i \int_{-\inf}^{T}df(\sum_j g_{ij}^n a_j^n - \hat{y}_i^n)^2
-
-**[SuperSpike]()**
-
-## Learning in the Machine
-**[Learning in the Machine: To Share or not to Share]()**
-
-## Unsupervised
-**[Unsupervised Learning by Competing Hidden Units](https://arxiv.org/pdf/1806.10181.pdf)**  
-* Can good/useful early layer representations be learned without supervision; using only a local “biological” synaptic plasticity rule?
-* Local learning rule, that incorporate both LTP and LTD types of plasticity and global inhibition in the hidden layer
-* Train with unsupervised, local rule; then use coding produced to train another layer using SGD
-
-## Reinforcement Learning
-**[Reinforcement learning in artificial and biological systems](https://www.nature.com/articles/s42256-019-0025-4#ref-CR69)**
-* Connections from cortex to striatum
-  * Cortex represents available choices, strength of cortical connections on striatal cells represents value of choices
-  * Dopamine encodes Reward Prediction Error (RPE)
-  * Change in dopamine concentration drives synaptic plasticity on frontal striatal synapses
-* Learning on different timescales
-  * Plasticity in amygdala operates on fast timescales; activity dependent
-    * Susceptible to noise because of fast changes
-  * Plasticity in striatum operates on slower timescales; dopamine dependent
-
-**[Prefrontal cortex as a meta-reinforcement learning system]()**
-* **System architecture:** PFC, together with the basal ganglia and thalamic nuclei with which it connects, as forming a recurrent neural network. Inputs: perceptual data, which either contains or is accompanied by information about executed actions and received rewards. On the output side, the network triggers actions and also emits estimates of state value
-
-* **Learning:** synaptic weights in the prefrontal network, including its striatal components, are adjusted by a model-free RL procedure, in which DA conveys a RPE signal. Via this role, the DA-based RL procedure shapes the activation dynamics of the recurrent prefrontal network
-
-* **Task environment:** RL takes place not on a single task, but instead in a dynamic environment posing a series of interrelated tasks. The learning system is thus
-required to engage in ongoing inference and behavioral adjustment
