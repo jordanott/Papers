@@ -1,5 +1,4 @@
 # Biologically Plausible Backpropagation  
-
 **[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)**  
 Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity and *approximate* backprop
 * **Temporal error models:**
@@ -24,20 +23,15 @@ Review of BPTT; general overview of attention and memory mechanisms used for Tem
 * Progress in solving difficult TCA has been made by memory- and attention-based architectures and algorithms
 * Strengthens BPTT’s position as a guide for thinking about TCA in artificial and biological systems
 
-**[Towards Biologically Plausible Deep Learning]()**
+**[Towards Biologically Plausible Deep Learning](https://arxiv.org/pdf/1502.04156.pdf?utm_content=buffer22202&utm_medium=social&utm_source=plus.google.com&utm_campaign=buffer)**
 * Weights change if there is a pre-synaptic spike in the temporal vecinity of a post-synaptic spike
-
-\Delta W_{ij} \prop S_i \dot{V_j}
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Delta&space;W_{ij}&space;\propto&space;S_i&space;\dot{V_j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Delta&space;W_{ij}&space;\propto&space;S_i&space;\dot{V_j}" title="\Delta W_{ij} \propto S_i \dot{V_j}" /></a>
 
 * **If the change ∆Vj corresponds to improving some objective function J, then STDP corresponds to approximate stochastic gradient descent in that objective function**
 
 * J comes out of a variational bound on the likelihood of the data (observed variable x; latent variable h)
 
-\text{Joint: }p(x,h); \text{Inference mechanism: }q^\*(H|x)
-
-\log p(x) = \log p(x) \sum_h q^\*(h|x)
-= \log p(x) \sum_h q^\*(h|x) \log \frac{p(x,h) q^\*(h|x)}{p(h|x)q^\*(h|x)}
-= E_{q^\*(H|x)} [\log p(x,H)] + H[q^\*(H|x)] + KL(q^\*(H|x) || p(H|x))
+<a href="https://www.codecogs.com/eqnedit.php?latex=\text{Joint:&space;}p(x,h);&space;\text{Inference&space;mechanism:&space;}q^*(H|x)&space;\\&space;\log&space;p(x)&space;=&space;\log&space;p(x)&space;\sum_h&space;q^*(h|x)&space;\\&space;=&space;\log&space;p(x)&space;\sum_h&space;q^*(h|x)&space;\log&space;\frac{p(x,h)&space;q^*(h|x)}{p(h|x)q^*(h|x)}&space;\\&space;=&space;E_{q^*(H|x)}&space;[\log&space;p(x,H)]&space;&plus;&space;H[q^*(H|x)]&space;&plus;&space;KL(q^*(H|x)&space;||&space;p(H|x))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\text{Joint:&space;}p(x,h);&space;\text{Inference&space;mechanism:&space;}q^*(H|x)&space;\\&space;\log&space;p(x)&space;=&space;\log&space;p(x)&space;\sum_h&space;q^*(h|x)&space;\\&space;=&space;\log&space;p(x)&space;\sum_h&space;q^*(h|x)&space;\log&space;\frac{p(x,h)&space;q^*(h|x)}{p(h|x)q^*(h|x)}&space;\\&space;=&space;E_{q^*(H|x)}&space;[\log&space;p(x,H)]&space;&plus;&space;H[q^*(H|x)]&space;&plus;&space;KL(q^*(H|x)&space;||&space;p(H|x))" title="\text{Joint: }p(x,h); \text{Inference mechanism: }q^*(H|x) \\ \log p(x) = \log p(x) \sum_h q^*(h|x) \\ = \log p(x) \sum_h q^*(h|x) \log \frac{p(x,h) q^*(h|x)}{p(h|x)q^*(h|x)} \\ = E_{q^*(H|x)} [\log p(x,H)] + H[q^*(H|x)] + KL(q^*(H|x) || p(H|x))" /></a>
 * Bound log-likelihood with cross-entropy term. Suggests q<sup>\*</sup> should approximate p(H|x)
 
 
