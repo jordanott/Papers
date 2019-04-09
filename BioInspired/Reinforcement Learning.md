@@ -6,9 +6,7 @@
   * Change in dopamine concentration drives synaptic plasticity on frontal striatal synapses
 * Learning on different timescales
   * Plasticity in amygdala operates on fast timescales; activity dependent
-    * Suscep## Learning in the Machine
-**[Learning in the Machine: To Share or not to Share]()**
-tible to noise because of fast changes
+    * Susceptible to noise because of fast changes
   * Plasticity in striatum operates on slower timescales; dopamine dependent
 
 **[Prefrontal cortex as a meta-reinforcement learning system]()**
