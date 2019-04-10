@@ -1,4 +1,8 @@
 # Biologically Plausible Backpropagation  
+
+**[Dendritic cortical microcircuits approximate the backpropagation algorithm](https://papers.nips.cc/paper/8089-dendritic-cortical-microcircuits-approximate-the-backpropagation-algorithm.pdf)**
+* Somatic, basal and apical integration zones
+
 **[Theories of Error Back-Propagation in the Brain](https://www.sciencedirect.com/science/article/pii/S1364661319300129)**  
 Learning rules in biologically plausible models can be implemented with different types of spike-time-dependent plasticity and *approximate* backprop
 * **Temporal error models:**
