@@ -1,4 +1,14 @@
 # Spiking Neural Networks
+**[Deep Learning in Spiking Neural Networks](https://arxiv.org/pdf/1804.08150.pdf)**  
+Overcoming challenge of "hard spike" in training SNNs:  
+1. resorting to entirely biologically inspired local learning rules for the hidden units  
+2. translating conventionally trained “rate-based” neural networks to SNNs 
+3. smoothing the network model to be continuously differentiable  
+4. defining a surrogate gradient as a continuous relaxation of the real gradients  
+    
+**[Surrogate Gradient Learning in Spiking Neural Networks](https://arxiv.org/pdf/1901.09948.pdf)**
+
+
 **[Synaptic Plasticity Dynamics for Deep Continuous Local Learning](https://arxiv.org/pdf/1811.10766.pdf)**  
     <a href="https://www.codecogs.com/eqnedit.php?latex=\centering&space;u_i&space;=&space;\sum_j&space;w_{ij}&space;(\epsilon&space;*&space;s_j)&space;&plus;&space;\eta&space;*&space;s_i;&space;s_i&space;=&space;\theta&space;(u_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\centering&space;u_i&space;=&space;\sum_j&space;w_{ij}&space;(\epsilon&space;*&space;s_j)&space;&plus;&space;\eta&space;*&space;s_i;&space;s_i&space;=&space;\theta&space;(u_i)" title="\centering u_i = \sum_j w_{ij} (\epsilon * s_j) + \eta * s_i; s_i = \theta (u_i)" /></a>
 
